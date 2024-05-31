@@ -18,7 +18,9 @@ jobs:
       - name: Lint
         run: |
           flake8 . --count --show-source --statistics --exclude=./test_*.py
+      - name: ls
+        run: |
+          ls ./tset_*.py
       - name: Test
         run: |
-          ls tset_*.py
           pytest test_*.py
