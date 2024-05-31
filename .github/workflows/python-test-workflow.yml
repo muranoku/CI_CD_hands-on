@@ -20,7 +20,7 @@ jobs:
           flake8 . --count --show-source --statistics --exclude=./test_*.py
       - name: output
         run: |
-          pytest test_*.py –-junitxml=’テスト結果.xml’
+          pytest test_*.py –-junitxml='テスト結果.xml'
       - name: Test
         run: |
           pytest test_*.py
