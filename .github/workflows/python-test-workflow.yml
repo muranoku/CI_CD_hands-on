@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: セットアップ
+      - name: setup
         uses: actions/setup-python@v5.1.0
         with:
           python-version: '3.x'
@@ -20,4 +20,5 @@ jobs:
           flake8 . --count --show-source --statistics --exclude=./test_*.py
       - name: Test
         run: |
+          ls ./tset-*.py
           pytest test_*.py
