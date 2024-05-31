@@ -18,9 +18,9 @@ jobs:
       - name: Lint
         run: |
           flake8 . --count --show-source --statistics --exclude=./test_*.py
-      - name: ls
+      - name: output
         run: |
-          ls tset_fizzbuzz.py
+          pytest　test_*.py –-junitxml=’テスト結果.xml’
       - name: Test
         run: |
           pytest test_*.py
