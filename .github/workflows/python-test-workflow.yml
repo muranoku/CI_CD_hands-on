@@ -20,7 +20,7 @@ jobs:
           flake8 . --count --show-source --statistics --exclude=./test_*.py
       - name: ls
         run: |
-          ls ./tset_*.py
+          ls tset_fizzbuzz.py
       - name: Test
         run: |
           pytest test_*.py
